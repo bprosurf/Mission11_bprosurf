@@ -10,10 +10,12 @@ namespace Project9.Components
     public class TypesViewComponent : ViewComponent
     {
         private IBookstoreRepository repo { get; set; }
+        private Basket basket;
 
-        public TypesViewComponent (IBookstoreRepository temp)
+        public TypesViewComponent (IBookstoreRepository temp, Basket basketService)
         {
             repo = temp;
+            basket = basketService;
         }
 
         public IViewComponentResult Invoke()
@@ -27,5 +29,6 @@ namespace Project9.Components
 
             return View(types);
         }
+
     }
 }

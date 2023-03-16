@@ -20,6 +20,7 @@ namespace Project9.Models
         }
 
         public DbSet<Book> Books { get; set; }
+        public DbSet<Buy> Purchases { get; set; }
 
 
     }
